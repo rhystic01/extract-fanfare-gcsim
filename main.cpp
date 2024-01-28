@@ -66,11 +66,11 @@ int main() {
 
     for (const auto& str : outputVector) {
         if (std::regex_search(str, match_pattern_finish_1, pattern_finish_1)) {
-            outputFile << match_pattern_finish_1[0] << " ";
+            outputFile << std::stof(match_pattern_finish_1[0])/60  << " ";
         }
 
         if (std::regex_search(str, match_pattern_finish_2, pattern_finish_2)) {
-            outputFile << match_pattern_finish_2[0] << std::endl;
+            outputFile << std::stof(match_pattern_finish_2[0])/0.0023 << std::endl;
         }
     }
 
